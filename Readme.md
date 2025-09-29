@@ -1,4 +1,3 @@
-````markdown
 # 🍽️ Restaurant AI Chatbot
 
 A **restaurant menu assistant** powered by **Google Gemini AI** and **LangChain**, built with **Node.js** and **Express**.  
@@ -11,12 +10,12 @@ Users can ask about food menus based on meal types, cuisines, dietary choices, o
 ✅ Chat-based restaurant query system  
 ✅ Broad classification support:
 
-| Type          | Options                                                           |
-|---------------|-------------------------------------------------------------------|
-| **Category**   | Breakfast, Lunch, Dinner, Snacks                                  |
-| **Subcategory**| Main Course, Desserts, Beverages, Starters                        |
-| **Cuisine**    | Indian, Italian, Chinese, Continental                             |
-| **Dietary**    | Vegan, Vegetarian, Gluten-Free                                    |
+| Type              | Options                                                           |
+|-------------------|-------------------------------------------------------------------|
+| \*\*Category\*\*     | Breakfast, Lunch, Dinner, Snacks                                  |
+| \*\*Subcategory\*\*  | Main Course, Desserts, Beverages, Starters                        |
+| \*\*Cuisine\*\*      | Indian, Italian, Chinese, Continental                             |
+| \*\*Dietary\*\*      | Vegan, Vegetarian, Gluten-Free                                    |
 
 ✅ Smart filtering — rejects unrelated questions  
 ✅ AI-powered responses using **LangChain Tool Calling + Gemini**  
@@ -45,7 +44,7 @@ G -->|No| J[Fallback AI Response]
 
 I --> K[Send Chat Response to Frontend]
 J --> K
-````
+
 
 ---
 
