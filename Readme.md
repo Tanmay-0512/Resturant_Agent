@@ -1,3 +1,4 @@
+````markdown
 # 🍽️ Restaurant AI Chatbot
 
 A **restaurant menu assistant** powered by **Google Gemini AI** and **LangChain**, built with **Node.js** and **Express**.  
@@ -31,20 +32,16 @@ flowchart TD
 
 A[User Input] --> B[Express Backend / API]
 B --> C[Check if Query is Food/Restaurant Related]
-C -->|Not Related| D[Return "Only food-related queries allowed"]
-
+C -->|Not Related| D[Only food-related queries allowed]
 C -->|Related| E[LangChain AgentExecutor]
 E --> F[Gemini LLM]
 F --> G{Should Call Tool?}
-
 G -->|Yes| H[Dynamic Menu Tool (getMenuTool)]
 H --> I[Return Menu Response]
-
 G -->|No| J[Fallback AI Response]
-
 I --> K[Send Chat Response to Frontend]
 J --> K
-
+````
 
 ---
 
@@ -92,4 +89,4 @@ node server.js
 
 Visit 👉 **[http://localhost:3000](http://localhost:3000)** to start chatting with your AI assistant.
 
-```
+---
