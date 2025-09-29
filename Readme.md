@@ -1,65 +1,96 @@
-Sure! Here's a **concise README** including only the content **up to step 5 of installation** in a clean Markdown format:
-
 ````markdown
 # 🍽️ Restaurant AI Chatbot
 
-A **restaurant menu assistant** using **Google Gemini AI** with **LangChain**, Node.js, and Express. Users can ask about menus for different meals, cuisines, dietary preferences, and subcategories, and get dynamic responses in real-time.
+A **restaurant menu assistant** powered by **Google Gemini AI** and **LangChain**, built with **Node.js** and **Express**.  
+Users can ask about food menus based on meal types, cuisines, dietary choices, or subcategories — and get instant AI-powered responses.
 
 ---
 
-## Features
+## 🚀 Features
 
-- Chatbot interface for restaurant menu queries
-- Broad menu classification:
-  - **Category:** breakfast, lunch, dinner, snacks
-  - **Subcategory:** main course, desserts, beverages, starters
-  - **Cuisine:** Indian, Italian, Chinese, Continental
-  - **Dietary filters:** vegan, vegetarian, gluten-free
-- Automatic detection of restaurant-related queries
-- AI-powered responses via **Google Gemini** and **LangChain** tool calling
-- Dynamic and expandable menu structure
-- Easy-to-use **web interface** with input field and chat display
+✅ Chat-based restaurant query system  
+✅ Broad classification support:
 
----
+| Type          | Options                                                           |
+|---------------|-------------------------------------------------------------------|
+| **Category**   | Breakfast, Lunch, Dinner, Snacks                                  |
+| **Subcategory**| Main Course, Desserts, Beverages, Starters                        |
+| **Cuisine**    | Indian, Italian, Chinese, Continental                             |
+| **Dietary**    | Vegan, Vegetarian, Gluten-Free                                    |
 
-## Technologies Used
-
-- **Node.js & Express** – server and API
-- **LangChain** – AI agent, tool calling
-- **Google Gemini AI** – large language model for menu responses
-- **Zod** – input schema validation for tools
-- **HTML/CSS/JS** – frontend chat interface
+✅ Smart filtering — rejects unrelated questions  
+✅ AI-powered responses using **LangChain Tool Calling + Gemini**  
+✅ Modular & easily expandable menu structure  
+✅ Simple **Web UI with chat interface**
 
 ---
 
-## Installation
+## 🧠 AI Architecture — How LLM & Tools Work Together
 
-1. **Clone the repository**
+```mermaid
+flowchart TD
+
+A[User Input] --> B[Express Backend / API]
+B --> C[Check if Query is Food/Restaurant Related]
+C -->|Not Related| D[Return "Only food-related queries allowed"]
+
+C -->|Related| E[LangChain AgentExecutor]
+E --> F[Gemini LLM]
+F --> G{Should Call Tool?}
+
+G -->|Yes| H[Dynamic Menu Tool (getMenuTool)]
+H --> I[Return Menu Response]
+
+G -->|No| J[Fallback AI Response]
+
+I --> K[Send Chat Response to Frontend]
+J --> K
+````
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer      | Technology Used                 |
+| ---------- | ------------------------------- |
+| Backend    | Node.js, Express                |
+| AI Core    | LangChain Agent + Google Gemini |
+| Validation | Zod                             |
+| Frontend   | HTML / CSS / JavaScript         |
+
+---
+
+## 📦 Installation
+
+### 1️⃣ Clone the Repository
 
 ```bash
 git clone <your-repo-url>
 cd <project-folder>
-````
+```
 
-2. **Install dependencies**
+### 2️⃣ Install Dependencies
 
 ```bash
 npm install
 ```
 
-3. **Create a `.env` file** in the root folder
+### 3️⃣ Add Environment Variables
+
+Create a `.env` file in the root folder:
 
 ```env
 GOOGLE_API_KEY=your_google_api_key_here
 ```
 
-4. **Start the server**
+### 4️⃣ Start the Server
 
 ```bash
 node server.js
 ```
 
-5. **Open your browser** at [http://localhost:3000](http://localhost:3000) to chat with the assistant.
+### 5️⃣ Open in Browser
+
+Visit 👉 **[http://localhost:3000](http://localhost:3000)** to start chatting with your AI assistant.
 
 ```
-
