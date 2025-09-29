@@ -41,7 +41,7 @@ G -->|No| J(Fallback AI Response)
 I --> K(Send Response to Frontend)
 J --> K
 
-
+```
 ---
 
 ## 🛠️ Tech Stack
